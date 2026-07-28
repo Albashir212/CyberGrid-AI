@@ -1,0 +1,6 @@
+Scenario,AE_DR%,AE_TTD,INPUT_DR%,INPUT_TTD,COMBINED_DR%,COMBINED_TTD
+clean,3.86,174h,4.71,31h,8.36,7h
+scaling,3.58,174h,4.61,77h,8.0,53h
+pulse,3.86,174h,4.73,31h,8.35,7h
+ramping,4.19,174h,5.41,31h,9.32,7h
+random,3.88,174h,4.73,30h,8.35,6h

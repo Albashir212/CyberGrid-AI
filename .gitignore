@@ -216,3 +216,15 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# CyberGrid-AI: large dataset -- run src/load_data.py to download
+data/
+
+# CyberGrid-AI: trained model weights -- run src/train.py to reproduce
+results/models/
+
+# Paper drafts -- exclude all versions except current
+papers/cybergrid.pdf
+papers/cybergrid_1pdf.pdf
+papers/cybergrid_v1.pdf
+papers/Untitled*.pdf

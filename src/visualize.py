@@ -287,10 +287,8 @@ def fig1_cusum_trajectory(det, test05, outdir: Path) -> None:
 
     # ── Super-title ───────────────────────────────────────────────────────
     fig.suptitle(
-        r"CUSUM trajectories under $\lambda=0.05$ scaling FDIA: "
-        r"RESIDUAL-DETECT fires at $+88$ h vs. INPUT-DETECT at $+201$ h "
-        r"— detectability gain $5.20\times$",
-        fontfamily="serif", fontsize=9, fontweight="normal", y=1.005,
+    r"CUSUM Detection Trajectories, $\lambda = 0.05$",
+    fontfamily="serif", fontsize=12, fontweight="semibold", y=1.01,
     )
 
     _save(fig, outdir / "fig2_cusum_trajectory.pdf")

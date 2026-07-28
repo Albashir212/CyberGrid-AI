@@ -1,0 +1,66 @@
+{
+  "config": {
+    "alpha": 0.01,
+    "calib_frac": 0.3,
+    "proper_train_frac": 0.7,
+    "min_group_size": 30,
+    "detrend_window": 720,
+    "detrend_gap": 24,
+    "k_ae": 0.5,
+    "k_input": 0.1,
+    "k_residual": 0.25,
+    "h_ae": null,
+    "h_input": null,
+    "h_residual": null,
+    "arl_window": 168,
+    "n_bootstrap_blocks": 2000,
+    "load_model": "gbm",
+    "gbm_max_iter": 300,
+    "gbm_max_depth": 6,
+    "gbm_learning_rate": 0.06,
+    "ridge_alpha": 1.0,
+    "n_spline_knots": 8,
+    "fusion": "vote",
+    "vote_threshold": 2,
+    "vote_window": 250,
+    "signals": [
+      "ae",
+      "input",
+      "residual"
+    ],
+    "random_state": 42
+  },
+  "metrics": {
+    "n_samples": 42303.0,
+    "n_attacked": 28202.0,
+    "n_false_alarms": 9.0,
+    "false_alarms_per_week": 0.10722643784128785,
+    "attack_coverage": 0.001170129778029927,
+    "arl0_hours": 814.0,
+    "detection_delay_hours": 88.0,
+    "detected": 1.0
+  },
+  "recovery": {
+    "first_alarm_h": 14189,
+    "n_corrected": 28114,
+    "mae_corrupted": 3.0271,
+    "mae_recovered": 5.4979,
+    "mae_improvement_%": -81.62,
+    "rmse_corrupted": 3.1411,
+    "rmse_recovered": 5.7049,
+    "rmse_improvement_%": -81.62,
+    "lambda_hat": -0.0374
+  },
+  "attack": "scaling",
+  "lambda": 0.05,
+  "detectability": {
+    "lambda": 0.05,
+    "mean_abs_temp": 60.500036405758735,
+    "sigma_temperature": 15.760336412934192,
+    "dg_dT_kW_per_degC": 3.503315375952348,
+    "sigma_residual_kW": 10.618723700701421,
+    "delta_input_sigma": 0.19193764276537767,
+    "delta_residual_sigma": 0.9980046272979632,
+    "detectability_gain": 5.19962948861424
+  }
+}

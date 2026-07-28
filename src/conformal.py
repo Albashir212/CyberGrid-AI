@@ -1063,8 +1063,22 @@ def attach_ae_error(cal: CalibrationData, test: TestData,
                  "day_of_week", "hour_of_day", "is_holiday"]
 
     def _windowed_ae_error(data: "CalibrationData") -> np.ndarray:
-        """Return per-timestep AE reconstruction MSE aligned to data length."""
-        raw = data.features[feat_cols].to_numpy(dtype="float32")
+        """Return per-timestep AE reconstruction MSE aligned to data length.
+
+        train.py FEATURE_COLS = [load, temperature, day_of_month,
+                                  day_of_week, hour_of_day, is_holiday]
+        cal.features carries only the 5 non-load columns; load lives in
+        cal.load. Reconstruct the full matrix before applying the scaler.
+        """
+        raw_df = pd.DataFrame({
+            "load"         : np.asarray(data.load,        dtype="float32"),
+            "temperature"  : np.asarray(data.temperature, dtype="float32"),
+            "day_of_month" : data.features["day_of_month"].to_numpy(),
+            "day_of_week"  : data.features["day_of_week"].to_numpy(),
+            "hour_of_day"  : data.features["hour_of_day"].to_numpy(),
+            "is_holiday"   : data.features["is_holiday"].to_numpy(),
+        })
+        raw    = raw_df[feat_cols].to_numpy(dtype="float32")
         scaled = scaler.transform(raw).astype("float32")
 
         n = len(scaled)

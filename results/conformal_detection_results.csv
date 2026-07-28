@@ -1,0 +1,11 @@
+Method,Scenario,Exceedance_rate%,Alarm_rate%,Time_to_detect,q_hat,Coverage%
+AE_Reconstruction,clean,10.03,12.78,548h,0.695571,
+AE_Reconstruction,scaling,9.27,12.09,548h,0.695571,
+AE_Reconstruction,pulse,10.01,12.76,548h,0.695571,
+AE_Reconstruction,ramping,10.96,14.02,548h,0.695571,
+AE_Reconstruction,random,9.99,12.76,548h,0.695571,
+Forecast_Conformal,clean,,5.51,1338h,16.608,92.11
+Forecast_Conformal,scaling,,5.15,1341h,16.608,91.77
+Forecast_Conformal,pulse,,5.81,1338h,16.608,91.86
+Forecast_Conformal,ramping,,8.03,1337h,16.608,90.8
+Forecast_Conformal,random,,5.86,1338h,16.608,92.06
